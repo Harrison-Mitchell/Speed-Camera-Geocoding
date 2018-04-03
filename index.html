@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NSW Speed Cameras</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+      html, body {
+        font-family: sans-serif;
+        margin: 0;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+      a:first-child {margin-top: 10%; display: inline-block;}
+      textarea {resize: none;}
+      #map {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://developers.google.com/maps/documentation/geocoding/intro" target="_blank">Get GMaps API key</a><br /><br />
+    <input id="api" type="password" size="40" placeholder="API key"/><br /><br />
+    <a href="http://roadsafety.transport.nsw.gov.au/speeding/speedcameras/current-locations.html" target="_blank">Camera tables</a><br />
+    <br /><textarea id="1" rows="6" cols="50" placeholder="Fixed speed cameras"></textarea/><br />
+    <br /><textarea id="2" rows="6" cols="50" placeholder="Fixed speed cameras - school zone"></textarea/><br />
+    <br /><textarea id="3" onpaste="setTimeout(process,10)" rows="6" cols="50" placeholder="Red light speed cameras"></textarea/><br />
+    <p>A: Fixed speed cameras</p>
+    <p>B: Fixed speed cameras - school zone</p>
+    <p>C: Red light speed cameras</p>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<KEY HERE>"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
